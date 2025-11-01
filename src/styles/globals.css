@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Primary Colors */
+  --forest-green: #0F3D2E;
+  --alpine-blue: #2E6F95;
+  --earth: #B49A84;
+  
+  /* Neutral Colors */
+  --white: #F7F9FA;
+  --gray: #8C8F91;
+  --black: #0A1A14;
+  
+  /* UI Colors */
+  --background: #F7F9FA;
+  --surface: #FFFFFF;
+  --border-color: #DADCDC;
+  --text-primary: #0F3D2E;
+  --text-secondary: #5B6765;
+  --ui-accent: #2E6F95;
+  --highlight: #B49A84;
+  --muted: #8C8F91;
+  
+  /* State Colors */
+  --success: #2E7D32;
+  --warning: #D98C2B;
+  --error: #B83A3A;
+  --info: #2E6F95;
+  
+  /* Shadcn UI compatibility */
+  --foreground: #0F3D2E;
+  --card: #FFFFFF;
+  --card-foreground: #0F3D2E;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F3D2E;
+  --primary: #0F3D2E;
+  --primary-foreground: #F7F9FA;
+  --secondary: #2E6F95;
+  --secondary-foreground: #FFFFFF;
+  --muted-bg: #DADCDC;
+  --muted-foreground: #5B6765;
+  --accent: #2E6F95;
+  --accent-foreground: #FFFFFF;
+  --destructive: #B83A3A;
+  --destructive-foreground: #FFFFFF;
+  --border: #DADCDC;
+  --input: transparent;
+  --input-background: #F7F9FA;
+  --switch-background: #DADCDC;
+  --ring: #2E6F95;
+  
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-subheading: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-caption: 'Poppins', sans-serif;
+  
+  /* Font Weights */
+  --font-weight-extrabold: 800;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-section: 80px;
+  
+  /* Border Radius */
+  --radius-soft: 8px;
+  --radius-rounded: 12px;
+  --radius-pill: 999px;
+  --radius: 12px;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 12px rgba(15, 61, 46, 0.08);
+  --shadow-medium: 0 8px 20px rgba(15, 61, 46, 0.12);
+  --shadow-elevated: 0 12px 32px rgba(15, 61, 46, 0.18);
+  
+  /* Button Colors */
+  --button-primary-bg: #0F3D2E;
+  --button-primary-text: #FFFFFF;
+  --button-primary-hover: #0B2F23;
+  --button-secondary-bg: #2E6F95;
+  --button-secondary-text: #FFFFFF;
+  --button-secondary-hover: #255B79;
+  --button-outline-border: #0F3D2E;
+  --button-outline-text: #0F3D2E;
+  --button-outline-hover: #E8EFEF;
+  
+  /* Chart colors */
+  --chart-1: #0F3D2E;
+  --chart-2: #2E6F95;
+  --chart-3: #B49A84;
+  --chart-4: #2E7D32;
+  --chart-5: #D98C2B;
+  
+  /* Sidebar colors for compatibility */
+  --sidebar: #F7F9FA;
+  --sidebar-foreground: #0F3D2E;
+  --sidebar-primary: #0F3D2E;
+  --sidebar-primary-foreground: #F7F9FA;
+  --sidebar-accent: #2E6F95;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #DADCDC;
+  --sidebar-ring: #2E6F95;
+  
+  /* Radius compatibility */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+.dark {
+  --background: #0A1A14;
+  --foreground: #F7F9FA;
+  --card: #0A1A14;
+  --card-foreground: #F7F9FA;
+  --popover: #0A1A14;
+  --popover-foreground: #F7F9FA;
+  --primary: #F7F9FA;
+  --primary-foreground: #0F3D2E;
+  --secondary: #2E6F95;
+  --secondary-foreground: #FFFFFF;
+  --muted-bg: #5B6765;
+  --muted-foreground: #8C8F91;
+  --accent: #2E6F95;
+  --accent-foreground: #FFFFFF;
+  --destructive: #B83A3A;
+  --destructive-foreground: #FFFFFF;
+  --border: #5B6765;
+  --input: #5B6765;
+  --ring: #2E6F95;
+  --chart-1: #2E6F95;
+  --chart-2: #B49A84;
+  --chart-3: #0F3D2E;
+  --chart-4: #2E7D32;
+  --chart-5: #D98C2B;
+  --sidebar: #0A1A14;
+  --sidebar-foreground: #F7F9FA;
+  --sidebar-primary: #2E6F95;
+  --sidebar-primary-foreground: #F7F9FA;
+  --sidebar-accent: #5B6765;
+  --sidebar-accent-foreground: #F7F9FA;
+  --sidebar-border: #5B6765;
+  --sidebar-ring: #2E6F95;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted-bg);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: var(--font-weight-normal);
+    color: var(--text-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--text-primary);
+  }
+  
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  
+  button {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  
+  label {
+    font-family: var(--font-caption);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  
+  p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: var(--font-weight-normal);
+    color: var(--text-secondary);
+  }
+  
+  /* Mobile Typography */
+  @media (max-width: 768px) {
+    body {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.3;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+      line-height: 1.4;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+    
+    button {
+      font-size: 0.95rem;
+    }
+    
+    label {
+      font-size: 0.75rem;
+    }
+    
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      font-weight: var(--font-weight-semibold);
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      font-weight: var(--font-weight-normal);
+    }
+
+    label {
+      font-size: 0.875rem;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    button {
+      font-size: 1rem;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    input {
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: var(--font-weight-normal);
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        line-height: 1.4;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      button {
+        font-size: 0.95rem;
+      }
+
+      label {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Custom utility classes */
+.subheading {
+  font-family: var(--font-subheading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.caption {
+  font-family: var(--font-caption);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Shadow utilities */
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-medium {
+  box-shadow: var(--shadow-medium);
+}
+
+.shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
